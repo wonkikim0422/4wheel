@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="4wheel">
+  <link
+    name="Body">
+    <inertial>
+      <origin
+        xyz="0.108885138044438 0.142308649679038 0.0585567936495662"
+        rpy="0 0 0" />
+      <mass
+        value="5.32485366509137" />
+      <inertia
+        ixx="0.0219378727233069"
+        ixy="1.47975198134048E-06"
+        ixz="-4.01751561825009E-06"
+        iyy="0.0149047739346839"
+        iyz="7.80337093935876E-06"
+        izz="0.023203020823872" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/Body.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/Body.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="LFS">
+    <inertial>
+      <origin
+        xyz="0.0666875210853818 -0.0256174029954353 0.0272583251967585"
+        rpy="0 0 0" />
+      <mass
+        value="0.26437001106024" />
+      <inertia
+        ixx="3.20746276473133E-05"
+        ixy="-1.44118283521332E-07"
+        ixz="-6.3085308434461E-08"
+        iyy="6.22704126338855E-05"
+        iyz="-2.01894652764198E-07"
+        izz="6.28519936954E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/LFS.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/LFS.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LFS"
+    type="prismatic">
+    <origin
+      xyz="0.315160991135077 0.0508115623588095 0.0264270997401359"
+      rpy="2.8339623757072 0 3.14159265358979" />
+    <parent
+      link="Body" />
+    <child
+      link="LFS" />
+    <axis
+      xyz="0 0.302801016091279 -0.953053799454201" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="LFW">
+    <inertial>
+      <origin
+        xyz="-0.00841099113507676 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.238771211024829" />
+      <inertia
+        ixx="0.000299070391410014"
+        ixy="-1.55250782770794E-21"
+        ixz="2.56332672441179E-22"
+        iyy="0.000167368400731884"
+        iyz="0"
+        izz="0.000167368400731884" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/LFW.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/LFW.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LFW"
+    type="continuous">
+    <origin
+      xyz="0 -0.047479 0.052309"
+      rpy="-2.4847 0 3.1416" />
+    <parent
+      link="LFS" />
+    <child
+      link="LFW" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="3.1"
+      velocity="7" />
+  </joint>
+  <link
+    name="RFS">
+    <inertial>
+      <origin
+        xyz="0.0724473276378503 -0.0316832521314763 0.0253402400459297"
+        rpy="0 0 0" />
+      <mass
+        value="0.26437001106024" />
+      <inertia
+        ixx="3.20746276473134E-05"
+        ixy="1.44118283521343E-07"
+        ixz="6.30853084344519E-08"
+        iyy="6.22704126338856E-05"
+        iyz="-2.01894652764195E-07"
+        izz="6.28519936954001E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/RFS.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/RFS.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RFS"
+    type="prismatic">
+    <origin
+      xyz="-0.10492 0.012128 0.026427"
+      rpy="2.834 0 0" />
+    <parent
+      link="Body" />
+    <child
+      link="RFS" />
+    <axis
+      xyz="0 0.3028 -0.95305" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RFW">
+    <inertial>
+      <origin
+        xyz="-0.0141707976875452 -3.46944695195361E-18 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.238771211024828" />
+      <inertia
+        ixx="0.000299070391410013"
+        ixy="7.60876064294631E-22"
+        ixz="1.92785199737845E-21"
+        iyy="0.000167368400731884"
+        iyz="8.470329472543E-22"
+        izz="0.000167368400731884" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/RFW.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/RFW.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RFW"
+    type="continuous">
+    <origin
+      xyz="0 -0.028286 0.058405"
+      rpy="-0.36547 0 3.1416" />
+    <parent
+      link="RFS" />
+    <child
+      link="RFW" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      effort="3.1"
+      velocity="7" />
+  </joint>
+  <link
+    name="LBS">
+    <inertial>
+      <origin
+        xyz="0.0754022136877308 -0.0206011352566388 0.0126264314730555"
+        rpy="0 0 0" />
+      <mass
+        value="0.197009126147877" />
+      <inertia
+        ixx="1.68802738687172E-05"
+        ixy="-4.8069344421324E-21"
+        ixz="2.20361547124267E-20"
+        iyy="5.02184885667569E-05"
+        iyz="1.0508875929185E-06"
+        izz="4.72447473350486E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/LBS.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/LBS.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LBS"
+    type="prismatic">
+    <origin
+      xyz="0.31516 0.23081 0.01777"
+      rpy="2.834 0 3.1416" />
+    <parent
+      link="Body" />
+    <child
+      link="LBS" />
+    <axis
+      xyz="0 0.3028 -0.95305" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="LBC">
+    <inertial>
+      <origin
+        xyz="3.69517158149701E-07 -0.0414091858174605 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0227542250833331" />
+      <inertia
+        ixx="9.89955638664047E-06"
+        ixy="2.38712140060369E-10"
+        ixz="-8.13631800520925E-22"
+        iyy="3.71555891872553E-06"
+        iyz="8.40860599391821E-22"
+        izz="1.08253870221592E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/LBC.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/LBC.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LBC"
+    type="continuous">
+    <origin
+      xyz="0.0411609911350768 -0.0168161225554978 0.000713258979877972"
+      rpy="-1.87842660467749 0 3.14159265358979" />
+    <parent
+      link="LBS" />
+    <child
+      link="LBC" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="LBW">
+    <inertial>
+      <origin
+        xyz="-1.26692255714156E-05 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0520359417797529" />
+      <inertia
+        ixx="2.19659115893153E-05"
+        ixy="-1.00333801524274E-21"
+        ixz="1.13493085902278E-21"
+        iyy="1.25404547339816E-05"
+        iyz="0"
+        izz="1.25404547339816E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/LBW.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/LBW.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LBW"
+    type="continuous">
+    <origin
+      xyz="0 -0.0698 0"
+      rpy="-2.9677 0 0" />
+    <parent
+      link="LBC" />
+    <child
+      link="LBW" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="3.1"
+      velocity="7" />
+  </joint>
+  <link
+    name="RBS">
+    <inertial>
+      <origin
+        xyz="0.0754022136877307 -0.0206011352566361 0.0126264314730565"
+        rpy="0 0 0" />
+      <mass
+        value="0.197009126147877" />
+      <inertia
+        ixx="1.68802738687172E-05"
+        ixy="1.02896294767269E-20"
+        ixz="-2.43487583017138E-20"
+        iyy="5.0218488566757E-05"
+        iyz="1.0508875929185E-06"
+        izz="4.72447473350487E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/RBS.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/RBS.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RBS"
+    type="prismatic">
+    <origin
+      xyz="-0.099161 0.19919 0.01777"
+      rpy="2.834 0 0" />
+    <parent
+      link="Body" />
+    <child
+      link="RBS" />
+    <axis
+      xyz="0 0.3028 -0.95305" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RBC">
+    <inertial>
+      <origin
+        xyz="3.6951715815664E-07 -0.0414091858174606 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0227542250833332" />
+      <inertia
+        ixx="9.89955638664048E-06"
+        ixy="2.38712140064222E-10"
+        ixz="5.55865371635635E-22"
+        iyy="3.71555891872553E-06"
+        iyz="-1.04594403517916E-21"
+        izz="1.08253870221592E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/RBC.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/RBC.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RBC"
+    type="continuous">
+    <origin
+      xyz="0.0411609911350767 -0.0168161225554951 0.000713258979878978"
+      rpy="-1.26320346041911 0.00487553880916033 -0.0153462827143552" />
+    <parent
+      link="RBS" />
+    <child
+      link="RBC" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="RBW">
+    <inertial>
+      <origin
+        xyz="-1.2669225571485E-05 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0520359417797529" />
+      <inertia
+        ixx="2.19659115893153E-05"
+        ixy="2.11758236813575E-22"
+        ixz="1.17790519227551E-21"
+        iyy="1.25404547339816E-05"
+        iyz="-1.27054942088145E-21"
+        izz="1.25404547339816E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/RBW.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/RBW.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RBW"
+    type="continuous">
+    <origin
+      xyz="0 -0.0698 0"
+      rpy="-0.70587 0 -3.1416" />
+    <parent
+      link="RBC" />
+    <child
+      link="RBW" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      effort="3.1"
+      velocity="7" />
+  </joint>
+  <link
+    name="front_cam">
+    <inertial>
+      <origin
+        xyz="0.0498359968949385 0.0617836354959193 0.0687226592240569"
+        rpy="0 0 0" />
+      <mass
+        value="0.0436119950287128" />
+      <inertia
+        ixx="4.29479133591131E-06"
+        ixy="-8.85791114123034E-10"
+        ixz="-1.01813691701115E-09"
+        iyy="2.21058141232447E-05"
+        iyz="2.17579681215275E-08"
+        izz="2.35707058046401E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/front_cam.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/front_cam.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_cam"
+    type="fixed">
+    <origin
+      xyz="0.058161 0.080278 0.069504"
+      rpy="1.5708 0 0" />
+    <parent
+      link="Body" />
+    <child
+      link="front_cam" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="ball_cam">
+    <inertial>
+      <origin
+        xyz="0.0498359969149469 0.0617836350059216 -0.00374618107744314"
+        rpy="0 0 0" />
+      <mass
+        value="0.0436119951630768" />
+      <inertia
+        ixx="4.29479053059232E-06"
+        ixy="-8.85260765925042E-10"
+        ixz="-1.01843552507111E-09"
+        iyy="2.21058148138203E-05"
+        iyz="2.17580969417575E-08"
+        izz="2.35707057054937E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/ball_cam.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/ball_cam.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ball_cam"
+    type="fixed">
+    <origin
+      xyz="0.058165 0.048961 0.044286"
+      rpy="2.2021 0 0" />
+    <parent
+      link="Body" />
+    <child
+      link="ball_cam" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Lidar">
+    <inertial>
+      <origin
+        xyz="-0.0784930224009142 -0.74442743376688 -0.133449662212527"
+        rpy="0 0 0" />
+      <mass
+        value="0.0730845703902162" />
+      <inertia
+        ixx="1.95808756635695E-05"
+        ixy="4.28391179298426E-07"
+        ixz="-1.03933565415068E-07"
+        iyy="4.14184515330581E-05"
+        iyz="-9.42709167560441E-09"
+        izz="2.41250078994433E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/Lidar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel/meshes/Lidar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Lidar"
+    type="fixed">
+    <origin
+      xyz="0.240917570962768 0.0985608536718709 -0.571694502755536"
+      rpy="-1.5707963267949 0 -1.5707963267949" />
+    <parent
+      link="Body" />
+    <child
+      link="Lidar" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
